@@ -18,7 +18,7 @@ dist/
 build/
 
 # Claude Code 관련
-.claude/
+.claude/settings.local.json
 
 # 일반적인 로그 파일
 *.log
