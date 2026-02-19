@@ -1,0 +1,81 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #e8ecf1;
+}
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 3px;
+}
+
+/* Neumorphism card */
+.neu-card {
+  background: #edf1f5;
+  box-shadow: 8px 8px 16px #d1d5db, -8px -8px 16px #ffffff;
+}
+
+.neu-card:hover {
+  box-shadow: 10px 10px 20px #c9cdd1, -10px -10px 20px #ffffff;
+}
+
+/* Fade-in animation for hero */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navbar scroll state */
+.nav-scrolled {
+  background: rgba(232, 236, 241, 0.95) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Skill float card subtle animation */
+.skill-float-card {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.skill-float-card:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.skill-float-card:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
